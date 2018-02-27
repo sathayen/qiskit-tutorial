@@ -8,13 +8,15 @@ Welcome to the Quantum Information Software Kit ([QISKit](https://www.qiskit.org
 
 In this repository, we've put together a collection of Jupyter notebooks aimed at teaching people who want to use the [QISKit SDK](https://github.com/QISKit/qiskit-sdk-py) for writing quantum computing programs and executing them on one of several backends (online quantum processors, online simulators, and local simulators). For the online quantum processors, QISKit uses the [QISKit API](https://github.com/QISKit/qiskit-api-py) to connect to the [IBM Q Systems](https://quantumexperience.ng.bluemix.net/qx/experience).
 
-## Installation and Setup
+### Installation and Setup
 Please refer to [this note](INSTALL.ipynb) for installation and how to submit new tutorials by using github functionalities. 
 
 If you do not want to install, you can use a webhosted Jupyter notebook environment with [IBM DSX](https://github.com/QISKit/qiskit-tutorial/wiki/Running-Quantum-Program-on-IBM-DSx) as shown [here](running_on_IBM_DSX.ipynb).  
 
 
-## Contents
+***
+
+## Tutorial Contents
 ***
 We have organised the tutorials into three sections:
 
@@ -28,7 +30,7 @@ We've collected a core reference set of notebooks in this section. These noteboo
 In this first topic, we introduce you to the basic features of QISKit. More tutorials covering QISKit features can be found in [here](#appendix_tools) and developer documentation can be found [here](https://www.qiskit.org/documentation/).
   * [Write and run your first quantum program](reference/tools/getting_started.ipynb) - how to use QISKit.
   * [Working with different backends](reference/tools/working_with_backends.ipynb) - running a quantum program on different backends.
-  * [Using different gates](reference/tools/quantum_gates_and_linear_algebra.ipynb) - list of gates in QISKit and their linear algebra.
+  * [Using different gates](reference/tools/quantum_gates_and_linear_algebra.ipynb) - list of quantum gates in QISKit and their linear algebra.
   * [Visualisation of quantum states](reference/tools/visualizing_quantum_state.ipynb) -  illustrates the different tools we have for visualizing a quantum state.
         
 #### 2.2 [Introduction to quantum information science](reference/qis)
@@ -66,6 +68,7 @@ This is where the rest of the tutorials are. They are not guaranteed to work wit
 
   * [Compiling and running a quantum program](appendix/advanced_qiskit/compiling_and_running.ipynb) - how to rewrite circuits to different backends.
   * [Composer examples](appendix/advanced_qiskit/beginners_guide_composer_examples.ipynb) -  showing the different composer examples from [the Beginners Guide](https://quantumexperience.ng.bluemix.net/qx/tutorial?sectionId=beginners-guide&page=introduction).
+  * [Generate and plot coupling maps](appendix/advanced_qiskit/generate_and_plot_coupling_maps.ipynb) - showing the limitation of qubit connectivity in approximate quantum computers. 
   
 #### 3.2  [More on quantum information science](appendix/more_qis)<a id='appendix_qis'></a>
 
@@ -78,22 +81,27 @@ This is where the rest of the tutorials are. They are not guaranteed to work wit
   
 #### 3.3  [Further quantum algorithms and applications](appendix/algo_app)<a id='appendix_algorithms'></a>
 
-  * [Classical optimization](appendix/algo_app/classical_optimization.ipynb) - using Variatonal Quantum Eigensolve to solve classical optimization problems
+  * [Classical optimization](appendix/algo_app/classical_optimization.ipynb) - using Variatonal Quantum Eigensolver (VQE) to solve classical optimization problems
+  * [Topological quantum walk](appendix/algo_app/topological_quantum_walk.ipynb) - how to execute topological quantum walk on approximate quantum computers
 
 #### 3.4. [Everything else](appendix/etc)<a id='appendix_other'></a>
 
   * [Quantum Pseudo-Telepathy](appendix/etc/quantum_magic_square.ipynb) - demonstrating winning a game with shared entanglement that cannot be achieved with classical strategies.
   
-
-## Contributing
+  
+***
+### Contributing
 If you would like to contribute to the tutorials, there are a number of ways to get involved:
 
 * **Issues**: Issues can be reported with GitHub [issue reporting](https://github.com/QISKit/qiskit-tutorial/issues) for this repository. Select `New issue` and fill in a descriptive title and provide as much detail as is needed for the issue to be reproduced.
 * **Notebooks**: If you would like to contribute a notebook please create a [fork](https://help.github.com/articles/fork-a-repo/) of the repository from the `master` branch and create a [pull request](https://help.github.com/articles/about-pull-requests/) for your change. Note that new notebooks should be placed in the relevant part of the [Appendix](appendix) section. We will discuss in the [Slack channel](https://qiskit.slack.com/messages/C7SN3T90V) which of these should be in the [Reference](reference) section.
 
+* **Programs**: You can also submit programs that use the `qiskit-sdk-py` as part of the tutorials. We will have similar discussions as to incorporating notebooks in the above. 
+
 Note that edits to this ``README`` should be made to the Jupyter notebook file ``(README.ipynb)`` and then the following command run to create the markdown file ``(README.md)`` for GitHub:
 
     jupyter nbconvert --to markdown README.ipynb
+
 
 ## Contributors
 An alphabetical list of contributors can be found [here](CONTRIBUTORS.md). If you have contributed to these tutorials, please include your name there.
